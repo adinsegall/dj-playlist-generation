@@ -1,10 +1,10 @@
 # dj-playlist-generation
 
-**Natural language → DJ set, from your own library.** My MSc dissertation at the Centre for Digital Music (C4DM), Queen Mary University of London: type *"warm, groovy minimal house to open, building into peak-time techno"* and get back a sequenced playlist drawn from your private Rekordbox collection — not from a streaming catalog. Graded 83% (Distinction).
+**Natural language → DJ set, from your own library.** My MSc dissertation at the Centre for Digital Music (C4DM), Queen Mary University of London: type *"warm, groovy minimal house to open, building into peak-time techno"* and get back a sequenced playlist drawn from your private Rekordbox collection — not from a streaming catalog. Graded 83% (Distinction) and presented as a [Late-Breaking Demo at ISMIR 2026](https://ismir2026program.ismir.net/lbd_663.html).
 
 > **The code lives in a private repository.** I'm happy to walk through it or grant access for review — email [segalladin@gmail.com](mailto:segalladin@gmail.com). The full dissertation, slides, figures, and a 10-minute demo video are public here.
 
-[**Demo video**](../../releases/latest) · [**Dissertation (PDF)**](Segall_MSc_Dissertation.pdf) · [**Slides**](slides.pdf)
+[**Demo video**](../../releases/latest) · [**Dissertation (PDF)**](Segall_MSc_Dissertation.pdf) · [**Slides**](slides.pdf) · [**ISMIR 2026 LBD**](https://ismir2026program.ismir.net/lbd_663.html)
 
 ## The research question
 
@@ -42,6 +42,15 @@ Twelve DJs, blinded within-subject design (QMUL ethics approval QMERC DSEECS25.0
 ## Citation
 
 ```bibtex
+@inproceedings{segall2026lbd,
+  author    = {Segall, Adin and Fazekas, George},
+  title     = {Natural-Language Playlist Generation in Private DJ Libraries:
+               A Blinded Side-by-Side Demo},
+  booktitle = {Late-Breaking/Demo Session of the 27th International Society
+               for Music Information Retrieval Conference (ISMIR)},
+  year      = {2026}
+}
+
 @mastersthesis{segall2026djnlp,
   author  = {Adin Segall},
   title   = {Heuristic vs. Learned-Embedding Retrieval for Natural-Language Playlist
