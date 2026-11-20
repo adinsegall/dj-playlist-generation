@@ -21,7 +21,7 @@ Both systems share an identical upstream — one Gemini-2.5-Flash-Lite parse per
 
 Twelve DJs, blinded within-subject design (QMUL ethics approval QMERC DSEECS25.063), each running natural-language requests against their **own** library and rating paired playlists under rotated blinded labels.
 
-**Headline result, reported honestly: a tie.** Raw preference 37/36; confidence-weighted 131/119. But the aggregate hides structure — the learned system's per-participant lead tracks how much of that participant's library its embedding vocabulary actually covers: **Pearson r = +0.520 (95% CI [+0.013, +0.875], n = 12)**. System B wins where its embeddings know the library, and loses where they don't. That coverage dependency, not a blanket winner, is the finding.
+**Headline result, reported honestly: a tie.** Raw preference 37/36; confidence-weighted 131/119. But the aggregate hides structure — the learned system's per-participant lead tracks how much of that participant's library its embedding vocabulary actually covers: **Pearson r = +0.65 on raw preference counts (95% CI [+0.15, +0.92]), r = +0.52 confidence-weighted (CI [+0.01, +0.88]), n = 12**. System B wins where its embeddings know the library, and loses where they don't. That coverage dependency, not a blanket winner, is the finding.
 
 ![Vocabulary coverage vs confidence-weighted B lead](figures/fig4_pearson_scatter.png)
 
