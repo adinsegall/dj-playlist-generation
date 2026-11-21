@@ -2,7 +2,7 @@
 
 **Natural language → DJ set, from your own library.** My MSc dissertation at the Centre for Digital Music (C4DM), Queen Mary University of London: type *"warm, groovy minimal house to open, building into peak-time techno"* and get back a sequenced playlist drawn from your private Rekordbox collection, not from a streaming catalog. Graded 83% (Distinction) and presented as a [Late-Breaking Demo at ISMIR 2026](https://ismir2026program.ismir.net/lbd_663.html).
 
-> **The code lives in a private repository.** I'm happy to walk through it or grant access for review: email [segalladin@gmail.com](mailto:segalladin@gmail.com). The full dissertation, slides, figures, and a 10-minute demo video are public here.
+> **The application and ranking systems live in a private repository, but the [evaluation harness is public](eval/)** in this repo. I'm happy to walk through the rest or grant access for review: email [segalladin@gmail.com](mailto:segalladin@gmail.com). The full dissertation, slides, figures, and a 10-minute demo video are public here too.
 
 [**Demo video**](../../releases/latest) · [**Dissertation (PDF)**](Segall_MSc_Dissertation.pdf) · [**Slides**](slides.pdf) · [**ISMIR 2026 LBD**](https://ismir2026program.ismir.net/lbd_663.html)
 
@@ -28,12 +28,13 @@ Twelve DJs, blinded within-subject design (QMUL ethics approval QMERC DSEECS25.0
 ## Under the hood
 
 - **LLM outputs you can trust at corpus scale.** Every track enrichment passes a two-layer schema: Pydantic `Literal`-typed fields plus a two-retry post-validator, holding a **97.2% validation pass rate** across the corpus.
-- **A real evaluation harness.** Frozen-fixture regression evals for the ranking stack, an A/B comparison harness, automated per-playlist audits, and per-session blinded label maps.
+- **A real evaluation harness.** Frozen-fixture regression evals for the ranking stack, an A/B comparison harness, automated per-playlist audits, and per-session blinded label maps. The code is public in [`eval/`](eval/).
 - **Data engineering.** A Playwright scraper feeding a Parquet tracklist corpus, Rekordbox XML parsing, Spotify and Beatport metadata reconciliation, and Word2Vec plus sentence-transformer training pipelines. Python 3.12 with Poetry; a ~3,000-line Streamlit study app plus a CLI with a feedback loop.
 - **Honest failure analysis.** The write-up documents a popularity-prior leak under hard-constraint queries, a RAG layer that failed encoder-transfer sanity checks (shipped off, written up as future work), and the limits of n = 12. Carefully reported null results are still results.
 
 ## In this repo
 
+- [`eval/`](eval/): the evaluation harness, published from the private repo (metrics, the A/B harness, the fixture suite, study analysis, schema validators)
 - [`Segall_MSc_Dissertation.pdf`](Segall_MSc_Dissertation.pdf): the full dissertation
 - [`slides.pdf`](slides.pdf): the demo/viva slide deck
 - [`figures/`](figures/): pipeline and results figures
